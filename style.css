@@ -1,68 +1,146 @@
-:root
-{
-    font-size: 30px;
-    --dullbr:#B6A28E;
-    --orangebr:#E07B39;
-    --sagey:hsl(78, 33%, 84%);
-    --biscuit:bisque;
-    --coffee:#754E1A;
+:root {
+  font-size: 30px;
+  --dullbr: #b6a28e;
+  --orangebr: hsl(24, 73%, 65%);
+  --sagey: hsl(78, 33%, 94%);
+  --biscuit: bisque;
+  --coffee: hsl(34, 64%, 28%);
+  --brightbr: #34130c;
 }
-body
-{
-    background-color: bisque;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
 }
-*{
-    margin:0;
-    padding: 0;
-    transition: all 0.3s;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+  box-sizing: border-box;
 }
-header
-{
-    height: 1.9rem;
-    position: fixed;
-    width: 100%;
-    background-color:var(--orangebr);
- 
-    display: flex; 
-    align-items: center;
-    justify-items: center;
-    color: bisque;
-    padding: 20px;
-    gap:2.5rem;
-    justify-content: space-between;
-    line-height: 1;
-    
-}
-.navbar
-{
-    text-align: center;
-    display: flex; 
-    align-items: center;
-    justify-items: center;
-}
-.navmore
-{
-    text-align: center;
-    display: flex; 
-    align-items: center;
-    justify-items: center;
-    
-}
-.navitems
-{
-    text-decoration: none;
-    font-size: 1rem;
-    color: var(--sagey);
-    margin-inline: 5px;
-    padding: 0.8rem;
-    
+header {
+  height: 1.9rem;
+  position: fixed;
+  width: 100%;
+  background-color: var(--orangebr);
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: bisque;
+  padding: 20px;
+  gap: 2.5rem;
+  justify-content: space-between;
+  line-height: 1;
+  font-weight: 600;
 }
 
-.navitems:hover
-{
-    transform: scale(1.2);
-    text-shadow: 1px 5px 5px var(--coffee);
-    
+.main {
+  display: flex;
+  padding-top: 2rem;
+}
+.mainview {
+  flex-grow: 1;
+  background-color: red;
+  margin-left: 30%;
+}
+.scroll {
+  width: 20%;
+  position: fixed; /* Keeps the scrollbar on the side */
+  height: 100%;
+
+  padding-left: 20px;
+
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.logotext {
+  font-size: 0.9rem;
+
+  color: var(--brightbr);
+}
+.navbar {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.navmore {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.navitems {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--sagey);
+  margin-inline: 5px;
+  padding: 0.8rem;
+}
+
+.navitems:hover {
+  transform: scale(1.2);
+  text-shadow: 1px 5px 15px var(--coffee);
+}
+.centuries-list {
+  height: 100%; /* Fill container height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for invisible scrollbar */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+  margin-top: 2rem;
+}
+.scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.century {
+  padding: 1rem;
+  /* margin: 0.5rem 0; */
+  font-size: 1rem;
+  font-weight: bold;
+  list-style: none;
+  color: var(--coffee);
+  margin-bottom: 2.5rem;
+  transform: scale((0.9));
+  animation: big linear forwards;
+  animation-timeline: view();
+  animation-range: contain;
+}
+@keyframes big {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+  20% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+}
+.century:hover {
+  text-shadow: 1px 1px 15px hsl(11, 63%, 53%);
+}
+.century.in-view {
+  transform: scale(1.2); /* Scaled up when in view */
+  opacity: 1; /* Full opacity */
 }
