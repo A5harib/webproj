@@ -1,0 +1,68 @@
+:root
+{
+    font-size: 30px;
+    --dullbr:#B6A28E;
+    --orangebr:#E07B39;
+    --sagey:hsl(78, 33%, 84%);
+    --biscuit:bisque;
+    --coffee:#754E1A;
+}
+body
+{
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin:0;
+    padding: 0;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+header
+{
+    height: 1.9rem;
+    position: fixed;
+    width: 100%;
+    background-color:var(--orangebr);
+ 
+    display: flex; 
+    align-items: center;
+    justify-items: center;
+    color: bisque;
+    padding: 20px;
+    gap:2.5rem;
+    justify-content: space-between;
+    line-height: 1;
+    
+}
+.navbar
+{
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-items: center;
+}
+.navmore
+{
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-items: center;
+    
+}
+.navitems
+{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--sagey);
+    margin-inline: 5px;
+    padding: 0.8rem;
+    
+}
+
+.navitems:hover
+{
+    transform: scale(1.2);
+    text-shadow: 1px 5px 5px var(--coffee);
+    
+}
