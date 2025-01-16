@@ -85,7 +85,7 @@ header {
 .navitems {
   text-decoration: none;
   font-size: 1rem;
-  color: var(--sagey);
+  color: var(--brightbr);
   margin-inline: 5px;
   padding: 0.8rem;
 }
@@ -118,6 +118,7 @@ header {
   animation: big linear forwards;
   animation-timeline: view();
   animation-range: contain;
+  cursor: pointer;
 }
 @keyframes big {
   0% {
@@ -138,7 +139,7 @@ header {
   }
 }
 .century:hover {
-  text-shadow: 1px 1px 15px hsl(11, 63%, 53%);
+  text-shadow: 1px 1px 15px var(--coffee);
 }
 .century.in-view {
   transform: scale(1.2); /* Scaled up when in view */
