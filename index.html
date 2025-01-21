@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -30,7 +42,9 @@
     <section class="main">
       <div class="scroll">
         <ul class="centuries-list">
-          <li class="century">6th Century</li>
+          <li style="text-align: center" class="century">
+            Find Desired Century
+          </li>
           <li class="century">6th Century</li>
           <li class="century">7th Century</li>
           <li class="century">8th Century</li>
@@ -50,7 +64,37 @@
           <li class="century">6th Century</li>
         </ul>
       </div>
-      <div class="mainview"></div>
+      <div class="mainview">
+        <div class="hero">
+          <div class="heroleft">
+            <div class="smallH">Explore the</div>
+            <div class="bigH">Literary Archive</div>
+            <div class="divide"></div>
+            <div class="search">
+              <input
+                type="text"
+                class="searchbar"
+                placeholder="Search for a book"
+              />
+              <button class="searchbtn"><img src="search.png" alt="" /></button>
+            </div>
+          </div>
+          <div class="heroimg">
+            <img src="heroimg.jpg" alt="bookshelf" />
+          </div>
+        </div>
+        <div class="suggest">
+          <div class="sughead">Suggested Books:</div>
+          <div id="sugbooks" class="sugbooks">
+
+          
+            </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="script.js"></script>
