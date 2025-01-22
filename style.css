@@ -121,7 +121,7 @@ header {
 .century {
   padding: 1rem;
   /* margin: 0.5rem 0; */
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   list-style: none;
   color: var(--coffee);
@@ -131,6 +131,7 @@ header {
   animation-timeline: view();
   animation-range: contain;
   cursor: pointer;
+  text-align: center;
 }
 @keyframes big {
   0% {
@@ -263,6 +264,17 @@ header {
   font-size: 1.1rem;
 }
 .sugbooks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.smallHC {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: var(--coffee);
+  font-weight: 600;
+}
+.books {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
