@@ -60,10 +60,10 @@
 
 //important code:
 
-// fetchAndDisplayBooks({
-//   query: "2024 philosophy ",
-//   targetElementId: "sugbooks",
-// });
+fetchAndDisplayBooks({
+  query: "2024 philosophy ",
+  targetElementId: "sugbooks",
+});
 let bookNumber = 1;
 
 function home() {
@@ -236,10 +236,10 @@ function addBook() {
     return;
   }
 
-  // fetchAndDisplayBooks({
-  //   query: book,
-  //   targetElementId: "sugbooks",
-  // });
+  fetchAndDisplayBooks({
+    query: book,
+    targetElementId: "sugbooks",
+  });
   //findcontain
   const bookContainer = document.getElementById("bookContainer");
   //makeDiv
@@ -247,7 +247,7 @@ function addBook() {
   bookDiv.className = `bookElement${bookNumber}`;
   bookDiv.innerHTML = `
 <label for="bookElement${bookNumber}">${bookNumber}. ${book}</label>
-<button onclick="removeBook(this)">Delete</button>
+<button class="delBtn" onclick="removeBook(this)">Delete</button>
 `;
 
   //put div

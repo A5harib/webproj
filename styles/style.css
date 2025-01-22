@@ -7,7 +7,7 @@
   --orangebr: #b87d4b;
   --sagey: hsl(78, 33%, 94%);
   --biscuit: bisque;
-  --coffee: hsl(34, 64%, 28%);
+  --coffee: #754d1a;
   --brightbr: #34130c;
 }
 body {
@@ -426,4 +426,13 @@ h2 {
   border: 2.5px solid var(--coffee);
   border-radius: 15px;
   padding: 15px;
+}
+
+.delBtn {
+  background: linear-gradient(to right, var(--orangeabr), var(--orangebr));
+  border: 2px solid var(--coffee);
+  border-radius: 15px;
+  padding: 12px;
+  margin-left: 5px;
+  color: hsl(33, 100%, 18%);
 }
