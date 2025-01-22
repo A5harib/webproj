@@ -29,12 +29,12 @@
       </div>
       <div class="navbar">
         <a onclick="home()" href="" class="navitems">Home</a>
-        <a  href="" class="navitems">Log</a>
+        <a href="log.html" class="navitems">Log</a>
         <a href="" class="navitems">Learn More</a>
       </div>
       <div class="navmore">
         <a href="" class="navitems">Contact</a>
-     
+       
       </div>
     </header>
 
@@ -64,20 +64,39 @@
         </ul>
       </div>
       <div id="mainview" class="mainview">
-        <div class="login-box">
-            <h2>Sign In</h2>
-            <form>
-              <div class="textbox">
-                <input id="logname" type="text" placeholder="Username" name="username" required />
-              </div>
-              <div class="textbox">
-                <input type="password" placeholder="Password" name="password" required />
-              </div>
-              <button id="loginbtn" type="submit" class="loginbtn"><a class="logbtn" href="home.html">Sign in</a></button>
-
-            </form>
+         <div class="hero">
+          <div class="heroleft">
+            <div class="smallH">Explore the</div>
+            <div class="bigH">Literary Archive</div>
+            <div class="divide"></div>
+            <div class="search">
+              <input
+                type="text"
+                class="searchbar"
+                placeholder="Search for a book"
+              />
+              <button onclick="search()" class="searchbtn"><img src="assets/search.png" alt="" /></button>
+           
+            </div>
           </div>
-             
+          <div class="heroimg">
+            <img src="assets/heroimg.jpg" alt="bookshelf" />
+          </div>
+        </div>
+        <div class="suggest">
+          <div class="sughead">Suggested Books:</div>
+          <div id="sugbooks" class="sugbooks"></div>
+            
+              </div> 
+              <!-- <div class="show">
+                <div class="smallHC">The most important text of 6th century</div>
+                <div class="divide"></div>
+                <div id="books" class="books">
+
+
+                </div>
+              </div> -->
+            
               
               <footer class="footer">
                 <div class="footer-content">

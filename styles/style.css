@@ -57,7 +57,7 @@ header {
 }
 .scroll {
   width: 20%;
-  position: fixed; /* Keeps the scrollbar on the side */
+  position: fixed;
   height: 100%;
 
   padding-left: 20px;
@@ -107,20 +107,20 @@ header {
   text-shadow: 1px 5px 15px var(--coffee);
 }
 .centuries-list {
-  height: 100%; /* Fill container height */
-  overflow-y: scroll; /* Enable vertical scrolling */
-  padding-right: 10px; /* Space for invisible scrollbar */
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For IE and Edge */
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   margin-top: 2rem;
 }
 .scroll::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
 .century {
   padding: 1rem;
-  /* margin: 0.5rem 0; */
+
   font-size: 0.8rem;
   font-weight: bold;
   list-style: none;
@@ -155,8 +155,8 @@ header {
   text-shadow: 1px 1px 15px var(--coffee);
 }
 .century.in-view {
-  transform: scale(1.2); /* Scaled up when in view */
-  opacity: 1; /* Full opacity */
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 .book-card {
@@ -277,4 +277,153 @@ header {
 .books {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.footer {
+  color: var(--brightbr);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--brightbr);
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  color: var(--brightbr);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: var(--brightbr);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--coffee);
+  padding-top: 10px;
+  font-size: 0.9em;
+  color: var(--coffee);
+}
+
+.footer-bottom a {
+  color: var(--coffee);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.login-box {
+  background-color: var(--biscuit);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: var(--coffee);
+  margin: auto;
+  margin-bottom: 10rem;
+  height: 15rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--orangebr);
+}
+
+.textbox {
+  margin-bottom: 20px;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--coffee);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: var(--sagey);
+  color: var(--coffee);
+}
+
+.textbox input:focus {
+  border-color: var(--orangeabr);
+  outline: none;
+}
+
+.loginbtn {
+  background-color: var(--orangeabr);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.loginbtn:hover {
+  background-color: var(--orangebr);
+  transform: scale(1.05);
+}
+
+.loginbtn:active {
+  transform: scale(1);
+}
+
+.logbtn {
+  text-decoration: none;
+  color: white;
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: hsl(33, 100%, 95%);
+  border: 2.5px solid var(--coffee);
+  border-radius: 15px;
+  padding: 15px;
 }
