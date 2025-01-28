@@ -59,7 +59,7 @@
 // }
 
 //important code:
-
+let users = JSON.parse(localStorage.getItem("users")) || [];
 fetchAndDisplayBooks({
   query: "2024 philosophy ",
   targetElementId: "sugbooks",
@@ -262,4 +262,13 @@ function addBook() {
 function removeBook(button) {
   const bookDiv = button.parentElement;
   bookDiv.remove();
+}
+
+function showSignup() {
+  document.getElementById("login-form").classList.add("hidden");
+  document.getElementById("signup-form").classList.remove("hidden");
+}
+function showLogin() {
+  document.getElementById("signup-form").classList.add("hidden");
+  document.getElementById("login-form").classList.remove("hidden");
 }

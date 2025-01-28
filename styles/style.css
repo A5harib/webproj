@@ -436,3 +436,19 @@ h2 {
   margin-left: 5px;
   color: hsl(33, 100%, 18%);
 }
+.hidden {
+  display: none;
+}
+.already {
+  font-size: 0.6rem;
+  margin-top: 5px;
+}
+.show {
+  text-decoration: none;
+  color: var(--brightbr);
+}
+.show:hover {
+  transform: scale(1.3);
+  text-shadow: 1px 5px 15px var(--coffee);
+  text-decoration: underline;
+}
