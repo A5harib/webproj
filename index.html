@@ -71,10 +71,10 @@
                 <input id="logname" type="text" placeholder="Username" required />
               </div>
               <div class="textbox">
-                <input type="password" placeholder="Password"  required />
+                <input id="password" type="password" placeholder="Password"  required />
               </div>
-              <button  class="loginbtn" onclick="login()">Sign in</a></button>
-              <p class="already">Don't have an account? <a class="show" href="#" onclick="showSignup()">Sign up</a></p>
+              <button  class="loginbtn" onclick="login(event)">Sign in</a></button>
+              <p class="already">Don't have an account? <a class="showing" href="#" onclick="showSignup()">Sign up</a></p>
 
             </form>
           </div>
@@ -82,13 +82,13 @@
             <h2>Sign Up</h2>
             <form>
               <div class="textbox">
-                <input id="logname" type="text" placeholder="Username" required />
+                <input id="signname" type="text" placeholder="Username" required />
               </div>
               <div class="textbox">
-                <input type="password" placeholder="Password"  required />
+                <input id="signpassword" type="password" placeholder="Password"  required />
               </div>
               <button class="loginbtn" onclick="signup()">Sign Up</a></button>
-              <p class="already">Already have an account? <a class="show" href="#" onclick="showLogin()">Login</a></p>
+              <p class="already">Already have an account? <a class="showing" href="#" onclick="showLogin()">Login</a></p>
 
             </form>
           </div>

@@ -28,12 +28,12 @@
         </div>
       </div>
       <div class="navbar">
-        <a onclick="home()" href="" class="navitems">Home</a>
+        <a onclick="home()" href="home.html" class="navitems">Home</a>
         <a href="log.html" class="navitems">Log</a>
         <a href="LM.html" class="navitems">Learn More</a>
       </div>
       <div class="navmore">
-        <a href="contact.html" class="navitems">Contact</a>
+        <a href="" class="navitems">Contact</a>
         <a href="index.html" class="navitems">Log Out</a>
        
        
@@ -66,25 +66,17 @@
         </ul>
       </div>
       <div id="mainview" class="mainview">
-         <div class="hero">
-          <div class="heroleft">
-            <div class="smallH">Explore the</div>
-            <div class="bigH">Literary Archive</div>
-            <div class="divide"></div>
-            <div class="search">
-              <input
-                type="text"
-                class="searchbar"
-                placeholder="Search for a book"
-              />
-              <button onclick="search()" class="searchbtn"><img src="assets/search.png" alt="" /></button>
-           
-            </div>
-          </div>
-          <div class="heroimg">
-            <img src="assets/heroimg.jpg" alt="bookshelf" />
-          </div>
-        </div>
+        <section class="contact" style="text-align: center; padding: 2rem; background-color: var(--biscuit); border-radius: 10px; margin: 2rem auto; width: 80%; max-width: 600px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: var(--brightbr); font-size: 2rem; margin-bottom: 1rem;">Contact Us</h2>
+            <p style="color: var(--coffee); font-size: 1.2rem; margin-bottom: 1rem;">Have questions? Reach out to us!</p>
+            <form>
+              <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--coffee); border-radius: 5px;">
+              <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--coffee); border-radius: 5px;">
+              <textarea placeholder="Your Message" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--coffee); border-radius: 5px; height: 100px;"></textarea>
+              <button type="submit" style="background-color: var(--orangeabr); color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: all 0.3s;">Send Message</button>
+            </form>
+          </section>
+        
         <div class="suggest">
           <div class="sughead">Suggested Books:</div>
           <div id="sugbooks" class="sugbooks"></div>

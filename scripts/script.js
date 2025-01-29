@@ -264,6 +264,7 @@ function removeBook(button) {
   bookDiv.remove();
 }
 
+//login
 function showSignup() {
   document.getElementById("login-form").classList.add("hidden");
   document.getElementById("signup-form").classList.remove("hidden");
@@ -272,3 +273,39 @@ function showLogin() {
   document.getElementById("signup-form").classList.add("hidden");
   document.getElementById("login-form").classList.remove("hidden");
 }
+function signup() {
+  const username = document.getElementById("signname").value;
+  const password = document.getElementById("signpassword").value;
+
+  // Check if user already exists
+  if (users.some((user) => user.username === username)) {
+    alert("Username already exists!");
+    return;
+  }
+
+  // Add new user
+  users.push({ username, password });
+  localStorage.setItem("users", JSON.stringify(users));
+  alert("Signup successful! Please login.");
+  showLogin();
+}
+function login(event) {
+  event.preventDefault(); // Prevents form submission
+
+  const username = document.getElementById("logname").value;
+  const password = document.getElementById("password").value;
+
+  // Check if user exists and password matches
+  const user = users.find(
+    (user) => user.username === username && user.password === password
+  );
+  if (user) {
+    alert("Login successful!");
+    // Redirect to another page (e.g., dashboard)
+    window.location.href = "home.html"; // Replace with your actual page
+  } else {
+    alert("Invalid username or password!");
+  }
+}
+
+console.log(localStorage);
